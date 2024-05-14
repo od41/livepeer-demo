@@ -1,0 +1,8 @@
+sources:
+  - name: livepeer
+    handler:
+      graphql:
+        endpoint: https://gateway-arbitrum.network.thegraph.com/api/ae0236f5d34c7c1a5585b4bdabdd3161/deployments/id/Qma7bdQ3t7PpN19Qc4h37umg7ffZA3PyKNyNjb5koYNqVb
+
+documents:
+  - ./src/example-query.graphql

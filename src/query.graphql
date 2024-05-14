@@ -1,0 +1,32 @@
+# Most active transcoders by size of stake
+query TranscodersQuery {
+  protocols(first: 5) {
+    id
+    __typename
+    numActiveTranscoders
+  }
+  transcoders(
+    first: 100
+    where: {active: true}
+    orderBy: totalStake
+    orderDirection: desc
+  ) {
+    id
+    activationRound
+    deactivationRound
+    lastActiveStakeUpdateRound
+    feeShare
+    rewardCut
+    totalVolumeUSD
+    active
+    totalStake
+    pools(first: 10) {
+      id
+      __typename
+      totalStake
+      delegate {
+        id
+      }
+    }
+  }
+}
